@@ -1,0 +1,9 @@
+**Patient:** John R. Doe, HM3, USN
+
+**Medications:**
+
+*   **Tr Belladonna:** 15 mL
+*   **Amphogel gsad:** 120 mL
+*   **m & ft Solution:**
+
+**Instructions (Sig):** 5 mL tid a.c. (5 mL three times a day before meals).

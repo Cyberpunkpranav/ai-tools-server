@@ -1,0 +1,19 @@
+Here's a transcription of the prescription, formatted for clarity:
+
+**Patient Information:**
+
+*   Name: Ashvika
+*   Age: 4 yr / F
+*   Weight: 13.25 kg
+
+**Diagnosis:**
+
+*   URTI (Upper Respiratory Tract Infection)
+*   RR-22/min
+
+**Prescription:**
+
+1.  **Syp Calpol (250/5):** 4 mL every 6 hours for 3 days. (Q6H x 3d)
+2.  **Syp Delcon:** 3 mL three times a day for 5 days. (TDS x 5d)
+3.  **Syp Levolin:** 3 mL three times a day for 5 days. (TDS x 5d)
+4.  **Syp Meftal-P (100/5):** 3 mL as needed. (SOS)
