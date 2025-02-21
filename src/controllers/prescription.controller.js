@@ -33,8 +33,8 @@ import fs from 'fs';
       }
       const connection = await sql.getConnection();
       try{
-      const query = `INSERT INTO prescriptions (prescription,generated_result) VALUES (?,?)`
-      const [result]= await connection.execute(query,[prescription_filename,`${file_name}.txt`])
+      const query = `INSERT INTO prescriptions (prompt,prescription,response) VALUES (?,?,?)`
+      const [result]= await connection.execute(query,[UserInput,prescription_filename,`${file_name}.txt`])
       console.log("Database Insert Success:", result);
       res.status(200).json({ success: true, response: geminiResponse });
       }

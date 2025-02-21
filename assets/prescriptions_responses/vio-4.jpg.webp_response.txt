@@ -1,0 +1,25 @@
+**Patient Information:**
+
+*   Name: Lolita Alvarez
+*   Address: Bagong Ilog, Pasig City
+*   Age: 39
+*   Sex: Female
+*   Date: 2-5-13
+
+**Prescription:**
+
+1.  **Medication:** FeSO4 (Ferrous Sulfate) tablets
+    *   **Quantity:** 30 tablets
+    *   **Instructions:** A.D. (Assuming this means "as directed" or "as discussed")
+
+2.  **Medication:** Ascorbic Acid (Vitamin C) 500mg tablets
+    *   **Quantity:** 30 tablets
+    *   **Instructions:** Once a day
+
+**Physician Information:**
+
+*   Physician's Signature: I delacruz
+*   License No.: 12345
+*   PTR No.: 1234567
+
+**Note:** A.D. needs clarification from the doctor to give the patient clear instruction. This response is based on my interpretation of the written text. Please verify all information with a healthcare professional before dispensing.
