@@ -10,7 +10,7 @@ async function Naukri(){
     const SCRAPE_DO_URL = `http://api.scrape.do/?token=${process.env.SCRAPE_DO_TOKEN}&url=${TARGET_URL}`;
   
     const browser = await puppeteer.launch({
-        executablePath: "/usr/bin/google-chrome",
+        // executablePath: "/usr/bin/google-chrome",
         headless: false, // Set to false if you want to see the browser
         args: ["--no-sandbox", "--disable-setuid-sandbox"],
         
@@ -85,7 +85,7 @@ async function Naukri(){
         
 
         await newPage.waitForSelector('[class*="styles_detail"]');
-        const company_details = await newPage.$eval('[class*="styles_detail"]', el => el.textContent);
+        // const company_details = await newPage.$eval('[class*="styles_detail"]', el => el.textContent);
         
         // await newPage.waitForSelector('[class*="styles_comp-info-detail"] a');
         // const company_website = await newPage.$eval('[class*="styles_comp-info-detail"] a', el => el.href);
@@ -105,16 +105,16 @@ async function Naukri(){
             other_details:other_details_HTML,
             education:education_html,
             key_skills:key_skills,
-            
+
             company:{
-                name:await SafeExtract(newPage,'[class*="styles_about-company"] > div:first-child','textContent',3000),
-                details:company_details,
+                name:await SafeExtract(newPage,'[class*="styles_jd-header-comp-name"] a','textContent',3000),
+                details:await SafeExtract(newPage,'[class*="styles_about-company"] p','textContent',3000),
                 review:{
                 ratings: await SafeExtract(newPage,'[class*="styles_amb-rating"]','textContent',3000),
                 url:  await SafeExtract(newPage,'[class*="styles_rating-wrapper"] a','href',3000)
                 },
-                website:await SafeExtract(newPage,'[class*="styles_comp-info-detail"] a','href',3000),
-                address:await SafeExtract(newPage,'[class*="styles_comp-info-detail"]:nth-of-type(2) span','textContent',3000)
+                website: await SafeExtract(newPage, '[class*="styles_comp-info-detail"]:has(label:contains("Link:")) a', "href"),
+                address: await SafeExtract(newPage, '[class*="styles_comp-info-detail]:has(label:contains("Address:")) span', "textContent")
             }
         }
         console.log(i,job);
@@ -124,6 +124,7 @@ async function Naukri(){
          await newPage.close();
         }
 
+        
         // console.log(jobsarr)
     // const jsonData = JSON.stringify(jobsarr, null, 2);
     // Write to a file (job_data.json)
